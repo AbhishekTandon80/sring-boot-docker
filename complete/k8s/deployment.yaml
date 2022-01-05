@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: spring-ignite
+  name: spring-ignite
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-ignite
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: spring-ignite
+    spec:
+      containers:
+      - image: springio/spring-ignite:v1
+        name: spring-ignite
+        resources: {}
+status: {}
